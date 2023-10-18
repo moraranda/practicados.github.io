@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Ejercicio Seis</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            body{
+                font-family: 'Arial', sans-serif;
+                margin-top: 10px;
+                padding: 0px;
+                text-align: center;}
+
+            .card-header{
+                background-color: #6B95BF;
+                color: #fff;}
+
+            a{
+                text-decoration: none;
+                color: white;}
+
+            .div6{
+                display: flex;
+                justify-content: center;}
+
+            .div7{
+                display: flex;
+                justify-content: center;}
+
+            button{
+                color: #6B95BF;
+                width: 31%;
+                cursor: pointer;
+                height: 44px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 5px;
+                border:1px solid #6B95BF;;
+                border-radius: 8px;
+                position: relative;}
+
+            button:hover{
+                background: #4278AD;
+                color: #fff;}
+
+            textarea{
+                width: 31%;
+                padding: 8px;
+                margin-top: 20px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                border: 1px solid #6B95BF;}
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="div6">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-header"><a href="/index.html">EJERCICIO SEIS</a></div>
+                    <div class="card-body">
+                        <p class="card-text">Escribe un programa donde se solicite a un usuario un nuevo texto como párrafo para introducirlo en el HTML. Este nuevo texto / párrafo escrito por el usuario se insertará antes de otros dos párrafos que ya hay existentes en el documento.</p>
+                    </div>
+                </div>
+            </div>
+            <textarea id="parf" name="parf" rows="4" cols="50"></textarea><br>
+            <button onclick="insertarParrafo()">Insertar texto</button><br><br>
+
+            <div class="div7">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-body">
+                        <p class="card-text" id="parf1">Este es el primer párrafo</p>
+                        <p class="card-text" id="parf2">Este es el segundo párrafo</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            function insertarParrafo() {
+                var x = document.getElementById('parf').value;
+                
+                var nuevoParrafo = document.createElement("p");
+                nuevoParrafo.textContent = x;
+                    
+                var p1 = document.getElementById("parf1");
+                var p2 = document.getElementById("parf2");
+                    
+                p1.parentNode.insertBefore(nuevoParrafo, p1);}
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

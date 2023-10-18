@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Ejercicio Uno</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            body{
+                font-family: 'Arial', sans-serif;
+                margin-top: 10px;
+                padding: 0px;
+                text-align: center;}
+
+            .card-header{
+                background-color: #6B95BF;
+                color: #fff;}
+
+            a{
+                text-decoration: none;
+                color: white;}
+
+            .div1{
+                display: flex;
+                justify-content: center;}
+
+            button{
+                color: #6B95BF;
+                width: 50%;
+                cursor: pointer;
+                height: 44px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 5px;
+                border:1px solid #6B95BF;;
+                border-radius: 8px;
+                position: relative;}
+
+            button:hover{
+                background: #4278AD;
+                color: #fff;}
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="div1">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-header"><a href="../index.html">EJERCICIO UNO</a></div>
+                    <div class="card-body">
+                        <p class="card-text">Escribe un programa que abra una ventana y después, cuando el usuario pulse un link en la página principal analice si está ventana creada anteriormente nueva se cerró o no. Si la ventana se ha cerrado se indicará el mensaje "La ventana ya se cerró" y en otro caso "La ventana sigue abierta".</p>
+                        <button onclick="abrirVentana()">Abrir Ventana</button>
+                        <button onclick="verificarVentana()">Verificar Estado de Ventana</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            var x;
+
+            function abrirVentana() {
+                x = window.open("", "nuevo", "width=400,height=300");
+                x.document.write("<h4 style='text-align: center;'>Esta es la nueva ventana<h4><p style='text-align: center;'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, quam? Aspernatur reprehenderit obcaecati nostrum, blanditiis quaerat vitae rem porro quam eius dolorem voluptas vero doloremque? Odit nemo adipisci quis debitis.</p>");}
+
+            function verificarVentana() {
+                if (x && !x.closed) {
+                    alert("La ventana sigue abierta.");
+                    
+                } else {
+                    alert("La ventana ya ha sido cerrada.");}}
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Ejercicio Tres</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            body{
+                font-family: 'Arial', sans-serif;
+                margin-top: 10px;
+                padding: 0px;
+                text-align: center;}
+
+            .card-header{
+                background-color: #6B95BF;
+                color: #fff;}
+
+            a{
+                text-decoration: none;
+                color: white;}
+
+            .div3{
+                display: flex;
+                justify-content: center;}
+
+            input{
+                color: #6B95BF;
+                width: 31.5%;
+                cursor: pointer;
+                height: 44px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 5px;
+                border:1px solid #6B95BF;;
+                border-radius: 8px;
+                position: relative;}
+            
+            input[type="submit"]{
+                background-color: #6B95BF;
+                color: #fff;
+                cursor: pointer;}
+
+            input[type="submit"]:hover{
+                background-color: #4278AD;}
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="div3">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-header"><a href="/index.html">EJERCICIO TRES</a></div>
+                    <div class="card-body">
+                        <p class="card-text">Realiza un programa donde se pida por teclado un número y al pulsar un bóton "Calcular"  se calculará el cuadrado del número introducido si es mayor de 50, en caso de ser menor calculará el cubo. En ambos casos se utilizarán funciones definidas por el usuario y en estas se presentará el resultado en la página web.</p>
+                    </div>
+                </div>
+            </div><br>
+            <form>
+                <input type="text" id="x" name="x" autocomplete="off" placeholder="Ingresa un número" required><br>
+                
+                <input type="submit" onclick="calcularCuadradoCubo();" value="Calcular cubo o cuadrado">
+            </form>
+        </main>
+        <script>
+            function calcularCuadradoCubo() {
+                var x = document.getElementById('x').value;
+
+                if (x >= 50) {
+                    res = x * x;
+                    document.write("<h3 style='text-align: center; margin-top: 15px; color: #4278AD;'>El cuadrado de " + x + " es " + res + "<h3>");
+
+                } else if (x < 50){
+                    res = x * x *x;
+                    document.write("<h3 style='text-align: center; margin-top: 15px; color: #4278AD;'>El cubo de " + x + " es " + res + "<h3>");}}
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

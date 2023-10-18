@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Ejercicio Nueve</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            body{
+                font-family: 'Arial', sans-serif;
+                margin-top: 10px;
+                padding: 0px;
+                text-align: center;}
+
+            .card-header{
+                background-color: #6B95BF;
+                color: #fff;}
+
+            a{
+                text-decoration: none;
+                color: white;}
+
+            .div10{
+                display: flex;
+                justify-content: center;}
+
+            button{
+                color: #6B95BF;
+                width: 15.5%;
+                cursor: pointer;
+                height: 44px;
+                border: 0;
+                border-radius: 0;
+                margin-top: 15px;
+                border:1px solid #6B95BF;;
+                border-radius: 8px;
+                position: relative;}
+
+            button:hover{
+                background: #4278AD;
+                color: #fff;}
+
+            table{
+                display: flex;
+                justify-content: center;
+                padding: 15px;
+                background-color: white;
+                border-radius: 10px;}
+
+            tbody{
+                border: black 1px solid;}
+
+            td{
+                border: black 15px solid;}
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="div10">
+                <div class="card border-primary" style="max-width: 30rem;">
+                    <div class="card-header"><a href="/index.html">EJERCICIO NUEVE</a></div>
+                    <div class="card-body">
+                        <p class="card-text">Crea una tabla 3x5 cada celda debe contener una imagen en .JPG que ocupe poco. Al cargar el programa deben aparecer todas las imagenes. Además habrá dos botones: imágenes pares que muestre posiciones pares; imágenes impares que muestre posiciones impares.</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="numPares()">Imágenes Pares</button>
+            <button onclick="numImpares()">Imágenes Impares</button>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr class="table">
+                        <td><img src="/fichasAjedrez/peonn.jpg" alt="Imagen 1"></td>
+                        <td><img src="/fichasAjedrez/caballob.jpg" alt="Imagen 2"></td>
+                        <td><img src="/fichasAjedrez/reinan.jpg" alt="Imagen 3"></td>
+                        <td><img src="/fichasAjedrez/sacerdoteb.jpg" alt="Imagen 4"></td>
+                        <td><img src="/fichasAjedrez/peonn.jpg" alt="Imagen 5"></td>
+                    </tr>
+                    <tr class="table">
+                        <td><img src="/fichasAjedrez/peonb.jpg" alt="Imagen 6"></td>
+                        <td><img src="/fichasAjedrez/torren.jpg" alt="Imagen 7"></td>
+                        <td><img src="/fichasAjedrez/reyb.jpg" alt="Imagen 8"></td>
+                        <td><img src="/fichasAjedrez/torren.jpg" alt="Imagen 9"></td>
+                        <td><img src="/fichasAjedrez/peonb.jpg" alt="Imagen 10"></td>
+                    </tr>
+                    <tr class="table">
+                        <td><img src="/fichasAjedrez/peonN.jpg" alt="Imagen 11"></td>
+                        <td><img src="/fichasAjedrez/sacerdoteb.jpg" alt="Imagen 12"></td>
+                        <td><img src="/fichasAjedrez/reinan.jpg" alt="Imagen 13"></td>
+                        <td><img src="/fichasAjedrez/caballob.jpg" alt="Imagen 14"></td>
+                        <td><img src="/fichasAjedrez/peonn.jpg" alt="Imagen 15"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <script>
+            function numImpares() {
+                mostrarPorParidad(true);}
+
+            function numPares() {
+                mostrarPorParidad(false);}
+
+            function mostrarPorParidad(esPar) {
+                var imagenes = document.querySelectorAll('img');
+
+                imagenes.forEach(function (imagen, indice) {
+                if (esPar && indice % 2 === 0) {
+                    imagen.style.display = 'block';
+                
+                } else if (!esPar && indice % 2 !== 0) {
+                    imagen.style.display = 'block';
+
+                } else {
+                    imagen.style.display = 'none';}});}
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+
+</html>

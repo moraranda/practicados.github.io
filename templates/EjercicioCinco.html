@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Ejercicio Cinco</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+        <style>
+            body{
+                font-family: 'Arial', sans-serif;
+                margin-top: 10px;
+                padding: 0px;
+                text-align: center;}
+
+            .card-header{
+                background-color: #6B95BF;
+                color: #fff;}
+
+            a{
+                text-decoration: none;
+                color: white;}
+
+            .div5{
+                display: flex;
+                justify-content: center;}
+
+            button{
+                color: #6B95BF;
+                width: 50%;
+                cursor: pointer;
+                height: 44px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 5px;
+                border:1px solid #6B95BF;;
+                border-radius: 8px;
+                position: relative;}
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div class="div5">
+                <div class="card border-primary" style="max-width: 33rem;">
+                    <div class="card-header"><a href="../index.html">EJERCICIO CINCO</a></div>
+                    <div class="card-body">
+                        <p class="card-text">Haz una función en JavaScript + HTML que cambie el color de fondo. Utiliza setInterval() cada 1000ms para hacer el cambio. Cuando se realizcen 8 cambios se ejecuta clearInterval() que detiene el proceso, con un alert notifica que ya no hay más cambios.</p>
+                        <button><a href="/templates/EjercicioCinco.html" style="color: #4278AD;">Cambiar Fondo</a></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            var contador = 0;
+            var intervalo;
+        
+            function cambiarFondo() {
+                var colores = ["#C22929", "#D98B27", "#DBDE2A", "#48C13E", "#235BB0", "#3B6AA5", "#6C3EC1", "#C13E99"];
+                document.body.style.backgroundColor = colores[contador % colores.length];
+        
+                contador++;
+        
+                if (contador === 9) {
+                    clearInterval(intervalo);
+                    alert("Se han terminado los cambios de colores.");}}
+        
+                intervalo = setInterval(cambiarFondo, 1000);
+          </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </body>
+
+</html>
